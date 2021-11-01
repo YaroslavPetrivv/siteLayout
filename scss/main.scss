@@ -1,4 +1,372 @@
-body{
-  margin: 0;
-  padding: 0;
+@import "templates/flexTemplate";
+@import "variables/Colors";
+@import "mixin/buttonMixin";
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #000;
 }
+
+//.container {
+//  max-width: 1050px;
+//  margin: 0 auto;
+//
+//}
+//
+//.header {
+//  .header__nav {
+//    display: flex;
+//    align-items: center;
+//    justify-content: space-between;
+//
+//    height: 60px;
+//    @extend %displayFlex-alignItemsCenter-spaceBetween;
+//
+//    .header__menu {
+//      display: flex;
+//      align-items: center;
+//
+//      .header__logo {
+//        font-weight: bold;
+//        font-size: 24px;
+//        line-height: 32px;
+//        letter-spacing: 0.1px;
+//        color: $firstColor;
+//      }
+//
+//      .nav {
+//        ul {
+//          display: flex;
+//          margin-left: 105px;
+//          li {
+//
+//          }
+//        }
+//      }
+//    }
+//
+//
+//  }
+//}
+
+
+@media (max-width: 768px) {
+  body {
+    transition: all 0.3s ease 0s;
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 57px;
+    color: $firstColor;
+  }
+  h2 {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 57px;
+    letter-spacing: 0.2px;
+    color: $black-TitleColor;
+  }
+  h3 {
+    color: #252B42;
+    line-height: 32px;
+    font-size: 24px;
+    font-weight: 700;
+
+  }
+  h5 {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    color: $black-TitleColor;
+  }
+  h6 {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    color: $secondColor;
+  }
+
+  .header-mobile {
+
+    .header-mobile__menu {
+      color: $secondColor;
+      background-color: $secondBackgroundColor;
+      //@extend %displayFlex-alignItemsCenter-spaceBetween; // не працють міксіни в медіа кверях
+
+      padding: 21px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .header-mobile__icons {
+        :not(:first-child) {
+          margin-left: 28.5px;
+        }
+
+        display: flex;
+
+
+        .header-mobile__burger_menu {
+          display: block;
+          position: relative;
+          width: 23px;
+          height: 14px;
+          margin-top: 4px;
+
+          span {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 2px;
+            width: 23px;
+            background-color: $secondColor;
+            transition: all 0.3s ease 0s;
+          }
+
+          :before {
+            position: absolute;
+            right: 0;
+            top: 6px;
+            content: '';
+            height: 2px;
+            width: 23px;
+            background-color: $secondColor;
+            transition: all 0.3s ease 0s;
+          }
+
+
+          :after {
+            position: absolute;
+            right: 0;
+            top: 11.5px;
+            content: '';
+            height: 2px;
+            width: 23px;
+            background-color: $secondColor;
+            transition: all 0.3s ease 0s;
+          }
+
+        }
+
+        .active :before {
+          width: 17px;
+        }
+
+        .active :after {
+          width: 10px;
+        }
+
+      }
+
+    }
+
+
+    .toggle-burger-menu {
+      background-color: $secondBackgroundColor;
+      width: 100%;
+      transition: all 0.3s ease 0s;
+      overflow: hidden;
+      height: 0;
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        li {
+          line-height: 45px;
+          margin-bottom: 31px;
+
+          a {
+            color: $secondColor;
+            font-weight: 400;
+            font-size: 30px;
+          }
+        }
+      }
+
+    }
+
+
+    .activeMenu {
+      height: 325.6px;
+    }
+
+  }
+
+  .header-content {
+    background-image: url(../img/bg-header.png);
+    background-repeat: no-repeat;
+    background-position: 26% 19%;
+    background-size: cover;
+    @include displayFlex-center-center;
+    flex-direction: column;
+
+    .header__inform {
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .header__title {
+        text-align: center;
+        margin-top: 230px;
+
+        h1 {
+          margin-bottom: 35px;
+        }
+
+        h4 {
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 30px;
+          letter-spacing: 0.20000000298023224px;
+          margin-bottom: 35px;
+          color: $firstColor;
+        }
+      }
+
+      :nth-child(2) {
+        margin-bottom: 20px;
+      }
+
+      .button__round {
+        @include button__round;
+
+        &:hover {
+          @include button__round-active;
+        }
+      }
+    }
+
+    .header__form {
+      align-items: center;
+      margin: 40px 0 100px 0;
+      display: flex;
+      justify-content: center;
+      width: 328px;
+      flex-direction: column;
+      background-color: #FFFFFF;
+      border-radius: 10px;
+      padding: 40px 40px;
+
+      h3 {
+        margin-bottom: 30px;
+      }
+
+      form {
+
+
+        label {
+
+          :not(:first-child) {
+            margin-top: 0;
+          }
+
+          display: block;
+          margin-bottom: 12px;
+          margin-top: 10px;
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 24px;
+          letter-spacing: 0.20000000298023224px;
+          text-align: left;
+          color: $colorLabelText;
+        }
+
+        input, select {
+          border-radius: 5px;
+          border: 1px solid #BDBDBD;
+          width: 245px;
+          padding: 11px 0 11px 21px;
+        }
+
+        input::placeholder, select {
+          color: $colorInputText;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 28px;
+          letter-spacing: 0.20000000298023224px;
+        }
+
+        .button__square {
+          margin-top: 40px;
+          @include button__square;
+          font-size: 13px;
+        }
+      }
+    }
+
+
+  }
+
+  .leading-Medicine {
+    background-image: url("../img/leadingMedicine.png");
+    background-size: cover;
+    @include displayFlex-center-center;
+    flex-direction: column;
+
+
+    .leading-Medicine_title {
+      text-align: center;
+
+      .titles-paragraph {
+        @include title-paragraph;
+      }
+    }
+
+    .leading-Medicine__cards {
+      margin-bottom: 54px;
+      background-color: #D9EDFF;
+      border-radius: 10px;
+
+
+      .leading-Medicine_card-title {
+
+        @include displayFlex-center-center;
+        justify-content: space-between;
+        padding: 30px 49.5px;
+        border-radius: 10px;
+
+        .leading-Medicine_card-icon {
+          height: 72px;
+          width: 72px;
+          background-color: $firstColor;
+          border-radius: 50%;
+          @include displayFlex-center-center;
+        }
+
+        h5 {
+          margin-left: 15px;
+        }
+      }
+
+      .leading-Medicine_card-items {
+        background-color: $firstColor;
+        padding: 30px 44px 30px 50px;
+        border-radius: 11px;
+
+        h6 {
+          margin-bottom: 5px;
+        }
+
+        a {
+          color: $buttonBackgroundColor;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 24px;
+          letter-spacing: 0.2px;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+
+}
+
