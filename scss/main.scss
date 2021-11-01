@@ -81,6 +81,8 @@ body {
     line-height: 24px;
     letter-spacing: 0.1px;
     color: $black-TitleColor;
+    text-align: center;
+
   }
   h6 {
     font-weight: 600;
@@ -90,11 +92,19 @@ body {
     color: $secondColor;
   }
 
+  input, select {
+    border-radius: 5px;
+    border: 1px solid #BDBDBD;
+    width: 245px;
+    padding: 11px 0 11px 21px;
+  }
+
   .header-mobile {
 
     .header-mobile__menu {
       color: $secondColor;
       background-color: $secondBackgroundColor;
+
       //@extend %displayFlex-alignItemsCenter-spaceBetween; // не працють міксіни в медіа кверях
 
       padding: 21px 20px;
@@ -246,6 +256,7 @@ body {
     }
 
     .header__form {
+
       align-items: center;
       margin: 40px 0 100px 0;
       display: flex;
@@ -311,62 +322,366 @@ body {
     background-size: cover;
     @include displayFlex-center-center;
     flex-direction: column;
-
-
-    .leading-Medicine_title {
-      text-align: center;
-
-      .titles-paragraph {
-        @include title-paragraph;
-      }
-    }
+    padding: 98px 0 54px 0;
 
     .leading-Medicine__cards {
-      margin-bottom: 54px;
-      background-color: #D9EDFF;
-      border-radius: 10px;
 
 
-      .leading-Medicine_card-title {
-
-        @include displayFlex-center-center;
-        justify-content: space-between;
-        padding: 30px 49.5px;
+      .leading-Medicine_card {
+        max-width: 328px;
+        background-color: #D9EDFF;
         border-radius: 10px;
+        margin-bottom: 30px;
 
-        .leading-Medicine_card-icon {
-          height: 72px;
-          width: 72px;
-          background-color: $firstColor;
-          border-radius: 50%;
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .leading-Medicine_card-title {
+
           @include displayFlex-center-center;
+          justify-content: space-between;
+          padding: 30px 49.5px;
+          border-radius: 10px;
+
+          .leading-Medicine_card-icon {
+            height: 72px;
+            width: 72px;
+            background-color: $firstColor;
+            border-radius: 50%;
+            @include displayFlex-center-center;
+          }
+
+          h5 {
+            margin-left: 15px;
+          }
         }
 
-        h5 {
-          margin-left: 15px;
-        }
-      }
+        .leading-Medicine_card-items {
+          background-color: $firstColor;
+          padding: 30px 44px 30px 50px;
+          border-radius: 11px;
 
-      .leading-Medicine_card-items {
-        background-color: $firstColor;
-        padding: 30px 44px 30px 50px;
-        border-radius: 11px;
+          h6 {
+            margin-bottom: 5px;
+          }
 
-        h6 {
-          margin-bottom: 5px;
-        }
-
-        a {
-          color: $buttonBackgroundColor;
-          font-weight: 600;
-          font-size: 14px;
-          line-height: 24px;
-          letter-spacing: 0.2px;
-          margin-top: 5px;
+          a {
+            color: $buttonBackgroundColor;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 24px;
+            letter-spacing: 0.2px;
+            margin-top: 5px;
+          }
         }
       }
     }
   }
 
+  .section_title {
+    text-align: center;
+    margin-bottom: 75px;
+
+    .titles-paragraph {
+      @include title-paragraph;
+    }
+  }
+
+  .clientsSay {
+    background-color: $backgroundSectionColor;
+    @include displayFlex-center-center;
+    flex-direction: column;
+    padding: 75px 0 94px 0;
+
+    .section_title {
+      margin-bottom: 60px;
+    }
+
+    .reviews-cards {
+      .review-card {
+        max-width: 328px;
+        border: 1px solid #DEDEDE;
+        border-radius: 5px;
+        background-color: $firstColor;
+        padding: 31px 61px 31px 35px;
+        margin-bottom: 30px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        h6 {
+          margin: 20px 0;
+        }
+      }
+    }
+  }
+
+  .frequentlyAskedQuestion {
+    background-color: $backgroundSectionColor;
+    padding: 145px 0 100px 0;
+    @include displayFlex-center-center;
+    flex-direction: column;
+
+    .section_title {
+      margin-bottom: 45px;
+    }
+
+    .frequentlyAskedQuestion__faq-cards {
+
+      .frequentlyAskedQuestion__faq-card {
+        max-width: 328px;
+        background-color: $firstColor;
+        border-radius: 9px;
+        padding: 25px 37px 25px 30px;
+        display: flex;
+        margin-bottom: 30px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .frequentlyAskedQuestion__faq-icon {
+          margin-right: 26px;
+
+        }
+
+        .frequentlyAskedQuestion__faq-content {
+          h5 {
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  .pricing {
+    background-color: $backgroundSectionColor;
+    padding: 45px 0 81px 0;
+
+    .section_title {
+      margin-bottom: 60px;
+
+      p {
+        font-weight: 700;
+      }
+    }
+
+
+    .pricing__cards {
+      @include displayFlex-center-center;
+      flex-direction: column;
+
+      .pricing__card {
+        width: 327px;
+
+        @include displayFlex-center-center;
+        flex-direction: column;
+        background-color: $firstColor;
+        border: 1px solid #23A6F0;
+        padding: 50px 40.5px;
+        margin-bottom: 30px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        h3, h5 {
+          margin-bottom: 35px;
+          line-height: 24px;
+        }
+
+        .pricing__price {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 36.4px;
+
+          .pricing__cost {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+
+            h2 {
+              text-align: center;
+              color: $buttonBackgroundColor;
+            }
+          }
+
+          .pricing__char {
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+              color: $buttonBackgroundColor;
+              margin-bottom: 0;
+            }
+
+            h5 {
+              color: #8EC2F2;
+              margin-bottom: 0;
+            }
+          }
+        }
+
+        .pricing__options {
+
+
+          ul > li {
+            max-width: 247px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 16.3px;
+            line-height: 24px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            .pricing__icons {
+              margin-right: 10px;
+              height: 32px;
+              width: 32px;
+              border-radius: 200px;
+              background-color: #2DC071;
+              @include displayFlex-center-center;
+            }
+
+            .pricing__icons-unActive {
+              background-color: #BDBDBD;
+            }
+          }
+
+          .button__square {
+            @include button__square;
+            width: 246px;
+            margin-top: 35px;
+          }
+        }
+      }
+
+      .pricing__card-dark {
+        background-color: #252B42;
+        color: $firstColor;
+
+        h3, h5 {
+          color: $firstColor;
+        }
+      }
+
+    }
+  }
+
+  .subscribe {
+    background-color: $darkBackgroundColor;
+    @include displayFlex-center-center;
+    flex-direction: column;
+    padding: 90px 0;
+
+    h3 {
+      color: $firstColor;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .subscribe__input {
+      display: flex;
+      justify-content: center;
+
+      input {
+        width: auto;
+      }
+
+      input[type="text"] {
+        border-radius: 5px 0 0 5px;
+        border: 1px solid #E5E5E5;
+        padding: 11px 25px 11px 21px;
+        border-right: none;
+      }
+
+      input[type="submit"] {
+        color: $firstColor;
+        font-size: 14px;
+        line-height: 28px;
+        padding: 15px 22.5px;
+        border: 1px solid #E5E5E5;
+        background-color: #23A6F0;
+        border-radius: 0px 5px 5px 0px;
+      }
+
+    }
+  }
+  footer {
+    max-width: 221px;
+    margin: 0 auto;
+
+    .footer__cards-info {
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      flex-direction: column;
+      padding: 80px 0 57px 0;
+
+      p {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0.20000000298023224px;
+        color: $secondColor;
+        margin-bottom: 10px;
+
+        &:last-child {
+          margin-bottom: 10px;
+        }
+      }
+
+      a {
+        color: $secondColor;
+
+
+      }
+
+
+      h3 {
+        &:first-child {
+          margin-bottom: 25px;
+        }
+
+        margin-bottom: 20px;
+      }
+
+      .footer__social {
+        margin-top: 26px;
+      }
+
+      .footer__card-info {
+        margin-bottom: 30px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .footer__copyright {
+    background-color: $backgroundSectionColor;
+    padding: 25px 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      text-align: center;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 24px;
+      letter-spacing: 0.20000000298023224px;
+      color: $secondColor;
+    }
+
+  }
+
 }
+
 

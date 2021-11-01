@@ -36,6 +36,7 @@ body {
     line-height: 24px;
     letter-spacing: 0.1px;
     color: #252B42;
+    text-align: center;
   }
 
   h6 {
@@ -44,6 +45,13 @@ body {
     line-height: 24px;
     letter-spacing: 0.2px;
     color: #737373;
+  }
+
+  input, select {
+    border-radius: 5px;
+    border: 1px solid #BDBDBD;
+    width: 245px;
+    padding: 11px 0 11px 21px;
   }
 
   .header-mobile .header-mobile__menu {
@@ -136,6 +144,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     flex-direction: column;
   }
   .header-content .header__inform {
@@ -240,34 +249,29 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     flex-direction: column;
     padding: 98px 0 54px 0;
   }
-  .leading-Medicine .leading-Medicine_title {
-    text-align: center;
-  }
-  .leading-Medicine .leading-Medicine_title .titles-paragraph {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0.2px;
-    color: #737373;
-    margin-top: 10px;
-  }
-  .leading-Medicine .leading-Medicine__cards {
-    margin-bottom: 54px;
+  .leading-Medicine .leading-Medicine__cards .leading-Medicine_card {
+    max-width: 328px;
     background-color: #D9EDFF;
     border-radius: 10px;
+    margin-bottom: 30px;
   }
-  .leading-Medicine .leading-Medicine__cards .leading-Medicine_card-title {
+  .leading-Medicine .leading-Medicine__cards .leading-Medicine_card:last-child {
+    margin-bottom: 0;
+  }
+  .leading-Medicine .leading-Medicine__cards .leading-Medicine_card .leading-Medicine_card-title {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 30px 49.5px;
     border-radius: 10px;
   }
-  .leading-Medicine .leading-Medicine__cards .leading-Medicine_card-title .leading-Medicine_card-icon {
+  .leading-Medicine .leading-Medicine__cards .leading-Medicine_card .leading-Medicine_card-title .leading-Medicine_card-icon {
     height: 72px;
     width: 72px;
     background-color: #FFFFFF;
@@ -275,25 +279,300 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
   }
-  .leading-Medicine .leading-Medicine__cards .leading-Medicine_card-title h5 {
+  .leading-Medicine .leading-Medicine__cards .leading-Medicine_card .leading-Medicine_card-title h5 {
     margin-left: 15px;
   }
-  .leading-Medicine .leading-Medicine__cards .leading-Medicine_card-items {
+  .leading-Medicine .leading-Medicine__cards .leading-Medicine_card .leading-Medicine_card-items {
     background-color: #FFFFFF;
     padding: 30px 44px 30px 50px;
     border-radius: 11px;
   }
-  .leading-Medicine .leading-Medicine__cards .leading-Medicine_card-items h6 {
+  .leading-Medicine .leading-Medicine__cards .leading-Medicine_card .leading-Medicine_card-items h6 {
     margin-bottom: 5px;
   }
-  .leading-Medicine .leading-Medicine__cards .leading-Medicine_card-items a {
+  .leading-Medicine .leading-Medicine__cards .leading-Medicine_card .leading-Medicine_card-items a {
     color: #23A6F0;
     font-weight: 600;
     font-size: 14px;
     line-height: 24px;
     letter-spacing: 0.2px;
     margin-top: 5px;
+  }
+
+  .section_title {
+    text-align: center;
+    margin-bottom: 75px;
+  }
+  .section_title .titles-paragraph {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #737373;
+    margin-top: 10px;
+    text-align: center;
+    padding: 0 41px;
+  }
+
+  .clientsSay {
+    background-color: #FAFAFA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 75px 0 94px 0;
+  }
+  .clientsSay .section_title {
+    margin-bottom: 60px;
+  }
+  .clientsSay .reviews-cards .review-card {
+    max-width: 328px;
+    border: 1px solid #DEDEDE;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    padding: 31px 61px 31px 35px;
+    margin-bottom: 30px;
+  }
+  .clientsSay .reviews-cards .review-card:last-child {
+    margin-bottom: 0;
+  }
+  .clientsSay .reviews-cards .review-card h6 {
+    margin: 20px 0;
+  }
+
+  .frequentlyAskedQuestion {
+    background-color: #FAFAFA;
+    padding: 145px 0 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .frequentlyAskedQuestion .section_title {
+    margin-bottom: 45px;
+  }
+  .frequentlyAskedQuestion .frequentlyAskedQuestion__faq-cards .frequentlyAskedQuestion__faq-card {
+    max-width: 328px;
+    background-color: #FFFFFF;
+    border-radius: 9px;
+    padding: 25px 37px 25px 30px;
+    display: flex;
+    margin-bottom: 30px;
+  }
+  .frequentlyAskedQuestion .frequentlyAskedQuestion__faq-cards .frequentlyAskedQuestion__faq-card:last-child {
+    margin-bottom: 0;
+  }
+  .frequentlyAskedQuestion .frequentlyAskedQuestion__faq-cards .frequentlyAskedQuestion__faq-card .frequentlyAskedQuestion__faq-icon {
+    margin-right: 26px;
+  }
+  .frequentlyAskedQuestion .frequentlyAskedQuestion__faq-cards .frequentlyAskedQuestion__faq-card .frequentlyAskedQuestion__faq-content h5 {
+    margin-bottom: 5px;
+  }
+
+  .pricing {
+    background-color: #FAFAFA;
+    padding: 45px 0 81px 0;
+  }
+  .pricing .section_title {
+    margin-bottom: 60px;
+  }
+  .pricing .section_title p {
+    font-weight: 700;
+  }
+  .pricing .pricing__cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .pricing .pricing__cards .pricing__card {
+    width: 327px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    border: 1px solid #23A6F0;
+    padding: 50px 40.5px;
+    margin-bottom: 30px;
+  }
+  .pricing .pricing__cards .pricing__card:last-child {
+    margin-bottom: 0;
+  }
+  .pricing .pricing__cards .pricing__card h3, .pricing .pricing__cards .pricing__card h5 {
+    margin-bottom: 35px;
+    line-height: 24px;
+  }
+  .pricing .pricing__cards .pricing__card .pricing__price {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 36.4px;
+  }
+  .pricing .pricing__cards .pricing__card .pricing__price .pricing__cost {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+  }
+  .pricing .pricing__cards .pricing__card .pricing__price .pricing__cost h2 {
+    text-align: center;
+    color: #23A6F0;
+  }
+  .pricing .pricing__cards .pricing__card .pricing__price .pricing__char {
+    display: flex;
+    flex-direction: column;
+  }
+  .pricing .pricing__cards .pricing__card .pricing__price .pricing__char h3 {
+    color: #23A6F0;
+    margin-bottom: 0;
+  }
+  .pricing .pricing__cards .pricing__card .pricing__price .pricing__char h5 {
+    color: #8EC2F2;
+    margin-bottom: 0;
+  }
+  .pricing .pricing__cards .pricing__card .pricing__options ul > li {
+    max-width: 247px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16.3px;
+    line-height: 24px;
+  }
+  .pricing .pricing__cards .pricing__card .pricing__options ul > li:last-child {
+    margin-bottom: 0;
+  }
+  .pricing .pricing__cards .pricing__card .pricing__options ul > li .pricing__icons {
+    margin-right: 10px;
+    height: 32px;
+    width: 32px;
+    border-radius: 200px;
+    background-color: #2DC071;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .pricing .pricing__cards .pricing__card .pricing__options ul > li .pricing__icons-unActive {
+    background-color: #BDBDBD;
+  }
+  .pricing .pricing__cards .pricing__card .pricing__options .button__square {
+    padding: 15px 55px;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 0.2px;
+    background-color: #23A6F0;
+    color: #FFFFFF;
+    width: 246px;
+    margin-top: 35px;
+  }
+  .pricing .pricing__cards .pricing__card-dark {
+    background-color: #252B42;
+    color: #FFFFFF;
+  }
+  .pricing .pricing__cards .pricing__card-dark h3, .pricing .pricing__cards .pricing__card-dark h5 {
+    color: #FFFFFF;
+  }
+
+  .subscribe {
+    background-color: #252B42;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 90px 0;
+  }
+  .subscribe h3 {
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .subscribe .subscribe__input {
+    display: flex;
+    justify-content: center;
+  }
+  .subscribe .subscribe__input input {
+    width: auto;
+  }
+  .subscribe .subscribe__input input[type=text] {
+    border-radius: 5px 0 0 5px;
+    border: 1px solid #E5E5E5;
+    padding: 11px 25px 11px 21px;
+    border-right: none;
+  }
+  .subscribe .subscribe__input input[type=submit] {
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 28px;
+    padding: 15px 22.5px;
+    border: 1px solid #E5E5E5;
+    background-color: #23A6F0;
+    border-radius: 0px 5px 5px 0px;
+  }
+
+  footer {
+    max-width: 221px;
+    margin: 0 auto;
+  }
+  footer .footer__cards-info {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 80px 0 57px 0;
+  }
+  footer .footer__cards-info p {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.200000003px;
+    color: #737373;
+    margin-bottom: 10px;
+  }
+  footer .footer__cards-info p:last-child {
+    margin-bottom: 10px;
+  }
+  footer .footer__cards-info a {
+    color: #737373;
+  }
+  footer .footer__cards-info h3 {
+    margin-bottom: 20px;
+  }
+  footer .footer__cards-info h3:first-child {
+    margin-bottom: 25px;
+  }
+  footer .footer__cards-info .footer__social {
+    margin-top: 26px;
+  }
+  footer .footer__cards-info .footer__card-info {
+    margin-bottom: 30px;
+  }
+  footer .footer__cards-info .footer__card-info:last-child {
+    margin-bottom: 0;
+  }
+
+  .footer__copyright {
+    background-color: #FAFAFA;
+    padding: 25px 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer__copyright p {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.200000003px;
+    color: #737373;
   }
 }
 

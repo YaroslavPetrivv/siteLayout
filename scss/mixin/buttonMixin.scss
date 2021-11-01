@@ -14,7 +14,7 @@
   color: $firstColor;
 }
 
-@mixin button__square{
+@mixin button__square {
   padding: 15px 55px;
   border: 1px solid #FFFFFF;
   border-radius: 5px;
@@ -23,7 +23,7 @@
   line-height: 22px;
   text-align: center;
   letter-spacing: 0.2px;
-  background-color:$buttonBackgroundColor;
+  background-color: $buttonBackgroundColor;
   color: $firstColor;
 }
 
@@ -41,13 +41,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
-@mixin title-paragraph{
+@mixin title-paragraph {
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0.2px;
   color: $secondColor;
   margin-top: 10px;
+  text-align: center;
+  padding: 0 41px;
 }
